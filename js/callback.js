@@ -9,3 +9,11 @@ function second() {
 
 first();
 second();
+
+function learnJS(lang, callback) {
+    console.log(`I learn: ${lang}`);
+    callback();
+}
+learnJS('JS', function(){
+    console.log("I passed this lesson");
+});
