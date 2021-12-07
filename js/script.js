@@ -10,7 +10,15 @@ const personalMovieDB = {
     movies: {},
     actors: {},
     genres: [],
-    privat: false
+    privat: false,
+    start,
+    privates,
+    filmAndMarks,
+    writeYourGenres,
+    detectPersonalLevel,
+    toggleVisibleMyDB,
+    showMyDB
+
 };
 
 
@@ -72,16 +80,32 @@ function start() {
     }
 }
 
-function showMyDB(durak) {
-    if (!durak) {
+function toggleVisibleMyDB() {
+    if (personalMovieDB.privat) {
+        personalMovieDB.privat = false;
+    } else {
+        personalMovieDB.privat = true;
+    }
+}
+
+function showMyDB() {
+    if (personalMovieDB.privat == false) {
         console.log(personalMovieDB);
     }
 }
 
 function writeYourGenres() {
     for (let i = 0; i < 3; i++) {
-        personalMovieDB.genres[i] = prompt(`Your favorite genre №${i+1}? `, '');;
+       let a = prompt(`Your favorite genre №${i+1}? `, '');
+        if (a == null || a == false) {
+            i--;
+        } else {
+        personalMovieDB.genres[i] = a;
+        }
     }
+    personalMovieDB.genres.forEach((prosto, i) => {
+        console.log(` Любимый жанр${i+1} - это ${prosto}`);
+    });
 }
 
 function privates (){
@@ -95,12 +119,13 @@ function privates (){
 
 
 
- privates();
- start();
- filmAndMarks();
- writeYourGenres();
- detectPersonalLevel();
- showMyDB(personalMovieDB.privat);
+ personalMovieDB.privates();
+ personalMovieDB.start();
+ personalMovieDB.toggleVisibleMyDB();
+ personalMovieDB.filmAndMarks();
+ personalMovieDB.writeYourGenres();
+ personalMovieDB.detectPersonalLevel();
+ personalMovieDB.showMyDB();
 
 
 
