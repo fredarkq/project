@@ -1,0 +1,13 @@
+button {
+    background-color: green;
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    border: 0px solid #000;
+    color: white;
+}
+
+a {
+    display: block;
+    margin-top: 50px;
+}
