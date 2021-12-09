@@ -50,3 +50,6 @@ div.innerHTML = "<h1>Hello World</h1>";
 // div.textContent = 'HEllo';
 
 div.insertAdjacentHTML('beforebegin', '<h2>Hello</h2>');
+
+// skdfjsldjfhsdljfhalsuifhasfasef
+//sdfsdfsdfsdf
