@@ -1,13 +1,17 @@
-button {
-    background-color: green;
-    height: 50px;
-    width: 150px;
-    border-radius: 10px;
-    border: 0px solid #000;
-    color: white;
+.wrapper {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    border: 1px solid blue;
 }
 
-a {
-    display: block;
-    margin-top: 50px;
+.box {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    position: absolute;
+}
+
+.button {
+    
 }
