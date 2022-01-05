@@ -1,19 +1,17 @@
-
-.box {
-    overflow: auto;
+* {
     box-sizing: border-box;
+}
+.wrapper {
     width: 400px;
-    height: 350px;
-    margin: 0 auto;
-    padding: 10;
-    margin-top: 50px;
-    
+    margin: 40px auto 0 auto;
+    border: 1px solid rgba(0,0,0, .2);
+    padding: 20px;
 }
 
 button {
-    display: block;
-    margin: 0 auto;
-    height: 20px;
-    margin-top: 30px;
-    width: 80px;
+    margin-top: 20px;
+}
+
+[type=checkbox] {
+    margin-top: 20px;
 }
